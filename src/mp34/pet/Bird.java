@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mp34.pet;
 
 /**
@@ -13,7 +8,9 @@ public class Bird extends Pet {
     public Bird() {
         super("Bird");
     }
-    
+    /**
+     * Increases age of pet by 5.
+     */
     @Override
     public void incAge() {
         if(this.getStatus().equals("Dead")) {

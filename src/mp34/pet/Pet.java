@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mp34.pet;
 
 /**
  *
  * @author MJNeff18579
  */
-
 public class Pet {
     //Fields
     private int age;
@@ -18,6 +12,10 @@ public class Pet {
     private static int numPets;
     
     //Constructor
+    /**
+     * Creates a pet object with an age of 0, Alive status, and chosen type.
+     * @param t - The type of pet (Bird, Dog, or Fish).
+     */
     public Pet(String t) {
     type = t;
     age = 0;
@@ -27,6 +25,9 @@ public class Pet {
     }
     
     //Methods
+    /**
+     * Runs a random chance test to see if pet dies, chance increases with age.
+     */
     public void expire() {
         if(status.equals("Dead")) {
             return;
@@ -40,23 +41,44 @@ public class Pet {
             
         }
     }
-    
+    /**
+     * Gets age of pet.
+     * @return age
+     */
     public double getAge() {
         return age;
     }
+    /**
+     * Gets number of pets.
+     * @return numPets
+     */
     public static int getNumPets() {
         return numPets;
     }
+    /**
+     * Gets status of pet.
+     * @return status
+     */
     public String getStatus() {
         return status;
     }
+    /**
+     * Gets type of pet.
+     * @return type
+     */
     public String getType() {
         return type;
     }
-    
+    /**
+     * Increases age of pet by 1.
+     */
     public void incAge(){
         this.age++;
     }
+    /**
+     * Returns pet's age, status, and type.
+     * @return age, status, type
+     */
     @Override
     public String toString() {
     return(this.age + ", " + this.status + ", " + this.type);

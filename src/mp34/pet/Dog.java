@@ -13,7 +13,9 @@ public class Dog extends Pet {
     public Dog() {
         super("Dog");
     }
-    
+    /**
+     * Increases age of pet by 7.
+     */
     @Override
     public void incAge() {
         if(this.getStatus().equals("Dead")) {
