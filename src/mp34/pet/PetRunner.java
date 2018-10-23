@@ -21,12 +21,12 @@ public class PetRunner {
         System.out.println("You have " + Pet.getNumPets() + " pets.");
         Pet Wally = new Bird();
         System.out.println("You have " + Pet.getNumPets() + " pets.");
-        Pet Mero = new Fish();
+        Pet Waluigi = new Fish();
         System.out.println("You have " + Pet.getNumPets() + " pets.");
         
         System.out.println(Alfie);
         System.out.println(Wally);
-        System.out.println(Mero);
+        System.out.println(Waluigi);
         
         //Runs simulation loop.
         do {
@@ -37,10 +37,10 @@ public class PetRunner {
             if (Wally.getStatus().equals("Alive")) {
                 System.out.println("Wally is " + Wally.getAge() + " years old.");
             }
-            if (Mero.getStatus().equals("Alive")) {
-                System.out.println("Mero is " + Mero.getAge() + " years old.");
+            if (Waluigi.getStatus().equals("Alive")) {
+                System.out.println("Waluigi is " + Waluigi.getAge() + " years old.");
             }
-            System.out.println("You have " + Pet.getNumPets() + " pets and their average age is " + ((Alfie.getAge() + Wally.getAge() + Mero.getAge())/Pet.getNumPets()));
+            System.out.println("You have " + Pet.getNumPets() + " pets and their average age is " + ((Alfie.getAge() + Wally.getAge() + Waluigi.getAge())/Pet.getNumPets()));
             System.out.println("Press enter to continue.");
             System.out.println("------------------------------");
             prompt.nextLine();
@@ -50,8 +50,8 @@ public class PetRunner {
             Alfie.incAge();
             Wally.expire();
             Wally.incAge();
-            Mero.expire();
-            Mero.incAge();
+            Waluigi.expire();
+            Waluigi.incAge();
             
             year++;
         } while (Pet.getNumPets() > 0);
